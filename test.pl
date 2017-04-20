@@ -19,7 +19,7 @@ print "ok 1\n";
 my $dir='/';
 my @result=Filesys::Statvfs::statvfs($dir);
 
-defined(@result) and
+scalar(@result) and
 	print"ok 2\n" or
 	die "not ok 2\nstatvfs\(\) call failed for \"$dir\" $!\n";
 
