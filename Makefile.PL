@@ -36,6 +36,7 @@ close(CONFIG);
 #### The include path is defined.
 #### Use this first to determine what
 #### stat call to use.
+#switch_to_statfs();
 #if(0) {
 if($include_path) {
 	if(-e "$include_path/$statvfs_path") {

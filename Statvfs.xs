@@ -33,7 +33,8 @@ statvfs(dir)
 		PUSHs(sv_2mortal(newSViv(st_ptr->f_ffree)));
 		PUSHs(sv_2mortal(newSViv(st_ptr->f_favail)));
 #if defined(_AIX__) || defined(_LINUX__)
-		PUSHs(sv_2mortal(newSViv(0)));
+//		PUSHs(sv_2mortal(newSViv(0)));
+        PUSHs(sv_2mortal(newSViv( st_ptr->f_fsid )));
 #else
 		PUSHs(sv_2mortal(newSViv(st_ptr->f_fsid)));
 #endif

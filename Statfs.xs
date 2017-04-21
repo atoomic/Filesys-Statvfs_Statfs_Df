@@ -51,4 +51,8 @@ statfs(dir)
 #ifndef _SOLARIS__
 		PUSHs(sv_2mortal(newSViv(st_ptr->f_bavail)));
 #endif
+        PUSHs(sv_2mortal(newSViv(  1111111 )));
+        PUSHs(sv_2mortal(newSViv(  st_ptr->f_fsid.__val[0] )));
+        PUSHs(sv_2mortal(newSViv(  st_ptr->f_fsid.__val[1] )));
+        PUSHs(sv_2mortal(newSViv(st_ptr->f_flags)));
 	}
